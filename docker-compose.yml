@@ -1,0 +1,15 @@
+web:
+  build: .
+  links:
+    - db
+  ports:
+    - "80"
+db:
+  image: tutum/mysql
+  environment:
+    STARTUP_SQL: "/tmp/database.sql"
+    ON_CREATE_DB: test
+    MYSQL_PASS: testpass
+  volumes:
+    - ./database.sql:/tmp/database.sql:ro
+

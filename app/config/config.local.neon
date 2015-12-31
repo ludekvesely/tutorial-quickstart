@@ -2,8 +2,9 @@ parameters:
 
 
 database:
-	dsn: 'mysql:host=127.0.0.1;dbname=test'
-	user:
-	password:
+	dsn: 'mysql:host=db;port=3306;dbname=test'
+	user: admin
+	password: testpass
 	options:
 		lazy: yes
+
